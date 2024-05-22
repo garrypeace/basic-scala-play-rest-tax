@@ -3,8 +3,5 @@
 # https://www.playframework.com/documentation/latest/ScalaRouting
 # ~~~~
 
-# An example controller showing a sample home page
-GET     /                           controllers.HomeController.index()
-
 # Tax calculation
-GET     /tax                        controllers.TaxController.calculateTax(income: Double)
+GET     /tax                        controllers.TaxController.getBand(income: Double)

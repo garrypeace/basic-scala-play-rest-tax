@@ -6,8 +6,7 @@ import play.api.libs.json.Json
 import services.TaxService
 
 class TaxController @Inject()(cc: ControllerComponents, taxService: TaxService) extends AbstractController(cc) {
-
-  def calculateTax(income: Double): Action[AnyContent] = Action {
+  def getBand(income: Double): Action[AnyContent] = Action {
     val tax = taxService.getBand(income)
     Ok(Json.obj("income" -> income, "tax" -> tax))
   }
